@@ -1,0 +1,56 @@
+name: Repo sanity
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+
+      - name: Check public-preview file set
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for file in AGENTS.md CLAUDE.md CHANGELOG.md CONTRIBUTING.md LICENSE README.md SECURITY.md manifest.json package.json docs/00_goal.md docs/01_requirements.md docs/02_runbook.md docs/03_status.md docs/04_decisions.md docs/06_mv3_design.md docs/07_manual_verification.md docs/08_manual_verification_result_template.md
+          do
+            test -f "$file"
+          done
+
+          for excluded_path in .env.example 00_START_HERE.md TEMPLATE_VERSION prompts templates
+          do
+            test ! -e "$excluded_path"
+          done
+
+      - name: Ensure agent instructions are in sync
+        shell: bash
+        run: |
+          set -euo pipefail
+          diff -q AGENTS.md CLAUDE.md
+
+      - name: Reject tracked environment files
+        shell: bash
+        run: |
+          set -euo pipefail
+          tracked="$(git ls-files | grep -E '(^|/)\.env(\..+)?$' || true)"
+          if [ -n "$tracked" ]; then
+            echo "Tracked environment file(s) detected:"
+            echo "$tracked"
+            exit 1
+          fi
+
+      - name: Run tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test

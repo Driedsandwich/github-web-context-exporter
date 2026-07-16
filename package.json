@@ -1,0 +1,18 @@
+{
+  "name": "github-web-context-exporter",
+  "version": "0.1.0",
+  "description": "Local-first visible-page GitHub Issue and Pull Request context exporter.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Driedsandwich/github-web-context-exporter.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

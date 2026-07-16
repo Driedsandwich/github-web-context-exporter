@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  max-width: 420px;
+  background: Canvas;
+  color: CanvasText;
+}
+
+.popup {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.header h1 {
+  margin: 2px 0 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: GrayText;
+}
+
+.panel {
+  border: 1px solid color-mix(in srgb, CanvasText 18%, transparent);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.panel p {
+  margin: 6px 0;
+}
+
+.status {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.status.supported {
+  color: LinkText;
+}
+
+.status.unsupported,
+.status.error {
+  color: MarkText;
+  background: Mark;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+  border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+  border-radius: 8px;
+  padding: 8px;
+  background: Canvas;
+  color: CanvasText;
+  font: 12px ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+  border-radius: 8px;
+  background: ButtonFace;
+  color: ButtonText;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.note {
+  color: GrayText;
+  line-height: 1.45;
+}

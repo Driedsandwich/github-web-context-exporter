@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Web Context Exporter",
+  "description": "Export visible GitHub issue or pull request context to Markdown.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "GitHub Web Context Exporter",
+    "default_popup": "src/popup/popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "clipboardWrite"]
+}

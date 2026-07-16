@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub Web Context Exporter</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup" aria-live="polite">
+      <header class="header">
+        <p class="eyebrow">visible-page-only</p>
+        <h1>GitHub Web Context Exporter</h1>
+      </header>
+      <section class="panel">
+        <h2>Current page</h2>
+        <p id="status" class="status">Checking current tab...</p>
+        <p>Repository: <span id="repo">-</span></p>
+        <p>Type: <span id="type">-</span></p>
+        <p>Number: <span id="number">-</span></p>
+        <p>Page title: <span id="page-title">-</span></p>
+        <p>Visible preview: <span id="content-preview">-</span></p>
+        <p>Visible comments: <span id="comments-preview">-</span></p>
+      </section>
+      <section class="panel">
+        <h2>Markdown preview</h2>
+        <textarea id="markdown-preview" rows="12" readonly placeholder="Markdown preview will appear here."></textarea>
+      </section>
+      <section class="panel">
+        <h2>Actions</h2>
+        <button id="copy" type="button" disabled>Copy Markdown</button>
+        <button id="download" type="button" disabled>Download Markdown</button>
+        <p id="action-status" class="note">Open a supported page to generate Markdown.</p>
+      </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

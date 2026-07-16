@@ -1,0 +1,44 @@
+name: Bug report
+description: Report reproducible behavior using public-safe information.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, private repository content, personal data,
+        private logs, or identifying screenshots. Follow SECURITY.md for
+        vulnerabilities.
+  - type: input
+    id: page_shape
+    attributes:
+      label: GitHub page shape
+      description: Issue, Pull Request Conversation, or unsupported page.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use a public-safe page and provide numbered steps.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Chrome version and operating system.
+    validations:
+      required: true
