@@ -58,3 +58,12 @@ export, redaction, or secret-scanner claims.
 
 Reason: the tested local workflow is useful, while broader distribution and
 support promises remain out of scope.
+
+## Independent cross-product operation
+
+Decision: keep this extension and Maintainer Context Kit independently
+operable. Do not add file import, stdin transfer, or a shared runtime schema
+without repeated workflow evidence that manual transfer is a material problem.
+
+Reason: the products have different trust and collection boundaries. Coupling
+them now would add maintenance surface without demonstrated user demand.

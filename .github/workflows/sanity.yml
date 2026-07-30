@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Check public-preview file set
         shell: bash
         run: |
           set -euo pipefail
 
-          for file in AGENTS.md CLAUDE.md CHANGELOG.md CONTRIBUTING.md LICENSE README.md SECURITY.md manifest.json package.json docs/00_goal.md docs/01_requirements.md docs/02_runbook.md docs/03_status.md docs/04_decisions.md docs/06_mv3_design.md docs/07_manual_verification.md docs/08_manual_verification_result_template.md
+          for file in .github/dependabot.yml AGENTS.md CLAUDE.md CHANGELOG.md CONTRIBUTING.md LICENSE README.md SECURITY.md manifest.json package.json docs/00_goal.md docs/01_requirements.md docs/02_runbook.md docs/03_status.md docs/04_decisions.md docs/06_mv3_design.md docs/07_manual_verification.md docs/08_manual_verification_result_template.md
           do
             test -f "$file"
           done
