@@ -17,7 +17,8 @@ a complete GitHub conversation exporter.
 - recognizes GitHub Issue pages
 - recognizes GitHub Pull Request conversation pages
 - extracts the visible title, source URL, body preview, and visible comment snippets
-- creates a Markdown preview with explicit limitations and a review-before-sharing warning
+- creates a Markdown preview with the title, explicit limitations, and a review-before-sharing warning
+- keeps body and comment previews inside an explicit untrusted-content blockquote boundary
 - copies the Markdown to the clipboard
 - saves the Markdown as a local `.md` file
 - fails closed when metadata injection fails
@@ -70,7 +71,8 @@ See [SECURITY.md](SECURITY.md) for the security policy and reporting route.
 defines reusable maintainer handoff and task-packet structures. GitHub Web
 Context Exporter is a smaller browser-side entry point that captures only the
 currently visible GitHub page context. It does not replace repository-aware
-context gathering or generate a complete task packet.
+context gathering or generate a complete task packet. The projects do not
+automatically transfer files or share a runtime schema.
 
 ## Development
 

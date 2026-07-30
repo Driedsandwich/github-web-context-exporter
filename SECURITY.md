@@ -11,8 +11,8 @@ made for earlier preview revisions.
 
 ## Report a vulnerability
 
-After the public repository enables GitHub Private Vulnerability Reporting,
-use the repository's **Security** tab and select **Report a vulnerability**.
+Use GitHub Private Vulnerability Reporting from the repository's **Security**
+tab and select **Report a vulnerability**.
 
 Do not place credentials, private repository content, private logs, identifying
 screenshots, or exploit details in a public Issue. If the private reporting

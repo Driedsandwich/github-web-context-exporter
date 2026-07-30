@@ -1,6 +1,6 @@
 # Manual Verification Guide
 
-Last updated: 2026-07-16
+Last updated: 2026-07-30
 
 This guide verifies the current local extension behavior. It is not a release or store-publishing checklist.
 
@@ -48,17 +48,19 @@ If testing on private repository pages, do not paste, publish, screenshot, or sh
 4. Confirm the Markdown preview includes:
    - `GitHub Issue Context`
    - `Source`
+   - the current document title and page URL under `Source`
    - `Limitations`
    - `Review Before Sharing`
    - `Body Preview`
    - `Visible Comments Preview`
    - `Suggested Next Use`
-5. Click `Copy Markdown`.
-6. Confirm the button immediately changes to `Copied!`.
-7. Confirm the button returns to `Copy Markdown` after about 1.5 seconds.
-8. Paste into a local scratch document and confirm Markdown was copied.
-9. Click `Download Markdown`.
-10. Confirm a local `.md` file is saved with a repository/page-based filename.
+5. Confirm body and comment snippets are blockquoted as untrusted page content.
+6. Click `Copy Markdown`.
+7. Confirm the button immediately changes to `Copied!`.
+8. Confirm the button returns to `Copy Markdown` after about 1.5 seconds.
+9. Paste into a local scratch document and confirm Markdown was copied.
+10. Click `Download Markdown`.
+11. Confirm a local `.md` file is saved with a repository/page-based filename.
 
 ## Verify a Pull Request conversation page
 
@@ -74,13 +76,15 @@ If testing on private repository pages, do not paste, publish, screenshot, or sh
 4. Confirm the Markdown preview includes:
    - `GitHub Pull Request Context`
    - `Source`
+   - the current document title and page URL under `Source`
    - `Limitations`
    - `Review Before Sharing`
    - `Body Preview`
    - `Visible Comments Preview`
    - `Suggested Next Use`
-5. Confirm the preview does not claim to include Files changed, diffs, checks, hidden content, or complete review threads.
-6. Confirm Copy and Download behave the same as on Issue pages.
+5. Confirm body and comment snippets are blockquoted as untrusted page content.
+6. Confirm the preview does not claim to include Files changed, diffs, checks, hidden or collapsed content, or complete review threads.
+7. Confirm Copy and Download behave the same as on Issue pages.
 
 ## Verify unsupported pages
 
@@ -116,6 +120,10 @@ Manual verification passes when:
 
 - supported Issue pages produce a Markdown preview
 - supported Pull Request conversation pages produce a Markdown preview
+- Source records the current document title and page URL
+- body and comment snippets remain inside blockquotes as untrusted content
+- hidden or collapsed DOM content is not promoted into body or comment previews
+- a visible comment is not promoted into a missing body preview
 - unsupported pages fail safely
 - Copy Markdown works, shows `Copied!`, and restores its label
 - Download Markdown saves a local `.md` file
@@ -131,4 +139,6 @@ Stop and open a follow-up issue if:
 - the output claims completeness that is not implemented
 - permissions expand unexpectedly
 - generated Markdown omits the review-before-sharing warning
+- hidden or collapsed DOM text appears in the generated preview
+- a comment is mislabeled as the page body
 - local save requires a new permission

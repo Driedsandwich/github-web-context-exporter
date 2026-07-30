@@ -21,7 +21,7 @@ Do not expand extraction scope until this result is filled out and any blocking 
 
 Choose one:
 
-- [ ] Pass: current behavior is acceptable for continued private iteration.
+- [ ] Pass: current behavior is acceptable for the maintainer-controlled public preview.
 - [ ] Conditional pass: minor issues recorded below; no privacy, permission, or misleading-output blocker.
 - [ ] Fail: stop feature expansion and fix blockers first.
 
@@ -45,8 +45,12 @@ Notes:
 - [ ] Type is `issue`.
 - [ ] Number is shown.
 - [ ] Page title is shown or clear fallback appears.
+- [ ] Source includes the current document title and page URL.
 - [ ] Body Preview appears or clear fallback appears.
 - [ ] Visible Comments Preview appears or clear fallback appears.
+- [ ] Body and comment snippets are blockquoted as untrusted content.
+- [ ] Hidden or collapsed content is not included.
+- [ ] A visible comment is not mislabeled as a missing body.
 - [ ] Markdown preview includes limitation language.
 - [ ] Markdown preview includes review-before-sharing language.
 
@@ -62,8 +66,12 @@ Notes:
 - [ ] Type is `pull request`.
 - [ ] Number is shown.
 - [ ] Page title is shown or clear fallback appears.
+- [ ] Source includes the current document title and page URL.
 - [ ] Body Preview appears or clear fallback appears.
 - [ ] Visible Comments Preview appears or clear fallback appears.
+- [ ] Body and comment snippets are blockquoted as untrusted content.
+- [ ] Hidden or collapsed content is not included.
+- [ ] A visible comment is not mislabeled as a missing body.
 - [ ] Markdown preview does not claim Files changed, diffs, checks, or complete review threads.
 
 Notes:
@@ -150,7 +158,7 @@ List issues that may be fixed later.
 
 Choose one:
 
-- [ ] Continue private iteration.
+- [ ] Continue the maintainer-controlled public preview.
 - [ ] Fix blockers before further development.
 - [ ] Re-run manual verification after fixes.
 

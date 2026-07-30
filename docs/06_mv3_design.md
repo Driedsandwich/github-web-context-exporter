@@ -27,6 +27,8 @@ The extension has no service worker or content-script registration.
 6. The popup validates the injection result and fails closed if extraction did
    not execute successfully.
 7. The formatter creates a visible-page-only Markdown preview.
+   Page-derived body and comment previews remain inside blockquotes marked as
+   untrusted content.
 8. The user can copy or locally save the Markdown.
 
 ## Supported URL patterns
@@ -41,6 +43,9 @@ https://github.com/<owner>/<repo>/pull/<number>
 Prefer an explicit fallback or extraction failure over a misleading export.
 Hidden, collapsed, paginated, dynamically unloaded, diff, check, and
 files-changed content is outside the completeness claim.
+
+The extractor uses visible `innerText` for page-derived body and comment
+content. It does not fall back to hidden `textContent`.
 
 ## Rendering principle
 

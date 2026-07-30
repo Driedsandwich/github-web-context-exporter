@@ -16,7 +16,8 @@ npm test
 
 The suite covers URL classification, Markdown formatting, filename generation,
 manifest permissions, self-contained metadata injection, fail-closed behavior,
-unsupported pages, and Copy feedback.
+hidden-content exclusion, untrusted Markdown framing, runtime network
+boundaries, unsupported pages, and Copy feedback.
 
 ## Load unpacked
 
