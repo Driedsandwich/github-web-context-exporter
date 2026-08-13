@@ -29,7 +29,7 @@ Pull Request support is limited to the Conversation page.
 
 ## Visible-page preview fields
 
-- page title
+- page title inside a Markdown-inert untrusted-content fence
 - visible body preview or an explicit unavailable fallback
 - visible comment snippets or an explicit unavailable fallback
 - body and comment previews structurally marked as untrusted page content
@@ -43,6 +43,7 @@ diff, check, or files-changed coverage.
 - `## Source`
 - `## Limitations`
 - `## Review Before Sharing`
+- `## Untrusted Page Title`
 - `## Body Preview`
 - `## Visible Comments Preview`
 - `## Suggested Next Use`

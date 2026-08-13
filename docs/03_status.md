@@ -18,7 +18,8 @@ Maintainer-controlled public OSS preview.
   missing body preview
 - fail-closed injection-error behavior
 - Markdown preview with limitation and review-before-sharing sections
-- title provenance and blockquoted untrusted body/comment previews
+- title provenance inside a Markdown-inert untrusted fence and blockquoted
+  untrusted body/comment previews
 - Copy Markdown with immediate `Copied!` feedback and timed restoration
 - local Markdown save without the Chrome Downloads API
 - exact manifest-permission regression tests
