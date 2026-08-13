@@ -14,6 +14,7 @@ All notable product changes will be recorded in this file.
 - Restricted body and comment extraction to visible `innerText` without hidden
   `textContent` fallback.
 - Added page title provenance to Markdown output.
+- Kept page titles inside a Markdown-inert untrusted-content fence.
 - Added structural blockquote boundaries for untrusted body and comment
   previews.
 - Added regression checks for hidden content, Markdown structure, background
