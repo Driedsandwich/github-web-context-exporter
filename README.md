@@ -16,7 +16,7 @@ a complete GitHub conversation exporter.
 
 - recognizes GitHub Issue pages
 - recognizes GitHub Pull Request conversation pages
-- extracts the visible title, source URL, body preview, and visible comment snippets
+- extracts the visible title, canonical source URL without query/fragment data, body preview, and visible comment snippets
 - creates a Markdown preview with the title, explicit limitations, and a review-before-sharing warning
 - keeps the title inside a Markdown-inert fenced block and body/comment previews inside an explicit untrusted-content blockquote boundary
 - copies the Markdown to the clipboard

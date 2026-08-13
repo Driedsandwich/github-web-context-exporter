@@ -11,7 +11,8 @@ Maintainer-controlled public OSS preview.
 - Chrome Manifest V3 popup
 - GitHub Issue and Pull Request Conversation URL classification
 - self-contained visible-page metadata injection
-- visible title, source URL, body preview, and visible comment snippets
+- visible title, canonical source URL without query/fragment data, body
+  preview, and visible comment snippets
 - rendered-visibility checks that reject hidden, inert, transparent, or
   non-rendered body/comment elements
 - explicit body selectors that do not promote the first comment into a
