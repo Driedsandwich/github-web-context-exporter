@@ -32,6 +32,7 @@ Pull Request support is limited to the Conversation page.
 - page title
 - visible body preview or an explicit unavailable fallback
 - visible comment snippets or an explicit unavailable fallback
+- body and comment previews structurally marked as untrusted page content
 
 The preview does not claim complete state, label, body, comment, review,
 diff, check, or files-changed coverage.
@@ -66,3 +67,4 @@ diff, check, or files-changed coverage.
 - no analytics or cloud sync
 - no GitHub write operation
 - manual review required before sharing exported Markdown
+- no automatic transfer to Maintainer Context Kit
