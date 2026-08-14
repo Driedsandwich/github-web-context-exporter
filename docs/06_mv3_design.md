@@ -28,7 +28,8 @@ The extension has no service worker or content-script registration.
    not execute successfully.
 7. The formatter creates a visible-page-only Markdown preview.
    Page-derived body and comment previews remain inside blockquotes marked as
-   untrusted content.
+   untrusted content, with dynamically sized fenced code blocks preventing
+   downstream Markdown renderers from activating page-supplied syntax.
 8. The user can copy or locally save the Markdown.
 
 ## Supported URL patterns

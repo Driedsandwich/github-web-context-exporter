@@ -32,7 +32,7 @@ Pull Request support is limited to the Conversation page.
 - page title inside a Markdown-inert untrusted-content fence
 - visible body preview or an explicit unavailable fallback
 - visible comment snippets or an explicit unavailable fallback
-- body and comment previews structurally marked as untrusted page content
+- body and comment previews structurally marked as untrusted page content and kept Markdown-inert inside dynamically sized fenced code blocks
 
 The preview does not claim complete state, label, body, comment, review,
 diff, check, or files-changed coverage.
