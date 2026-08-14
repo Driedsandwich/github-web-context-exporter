@@ -1,6 +1,6 @@
 # Status
 
-Last updated: 2026-07-30
+Last updated: 2026-08-14
 
 ## Current phase
 
@@ -54,17 +54,17 @@ There are no host permissions.
 
 ## Verification baseline
 
-- automated test suite: 38 tests in this local candidate
-- exact local candidate loaded with `Load unpacked` in an isolated Chrome for
-  Testing profile on 2026-07-30
-- public-safe Issue check covering title, canonical URL, visible body, and
-  visible comments
-- public-safe Pull Request Conversation check covering title, canonical URL,
-  visible body, and an explicit no-visible-comments fallback
+- automated test suite: 40 tests at the tested revision
+- exact commit `639031e038dd61c018f8a8f82556d78883e960cc` and tree
+  `6dccbd212674bee54f9405d79e49a21184848832` loaded with `Load unpacked` in an
+  isolated Chrome for Testing 151.0.7922.34 profile on macOS 26.5.2
+- completed public-safe receipt:
+  [2026-08-14 exact-revision manual-flow verification](09_manual_verification_result_2026-08-14.md)
+- public-safe Issue check covering title fence, canonical URL, visible body,
+  visible comments, Copy feedback, and local save
+- public-safe Pull Request Conversation check covering title fence, canonical
+  URL, visible body, visible comments, Copy feedback, and local save
 - unsupported repository-root check with no Markdown and disabled Copy/save
-- successful user-gesture Copy check, including `Copied!` feedback and timed
-  restoration
-- successful local Markdown save for both the Issue and Pull Request
 - manifest-permission check for `activeTab`, `scripting`, and `clipboardWrite`,
   with no host permissions
 
