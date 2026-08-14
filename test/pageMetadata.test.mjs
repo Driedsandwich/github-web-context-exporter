@@ -63,7 +63,7 @@ test("runs as a self-contained injected function for an Issue page", () => {
     kind: "issue",
     title: "Example issue · GitHub",
     heading: "Example issue",
-    url: "https://github.com/octo-org/example/issues/123",
+    url: "https://github.com/octo-org/example/issues/123?notification_referrer_id=synthetic#issuecomment-synthetic",
     body: "Visible issue body",
     comments: ["First visible comment"]
   }));
@@ -80,7 +80,7 @@ test("runs as a self-contained injected function for a Pull Request page", () =>
     kind: "pull request",
     title: "Example pull request · GitHub",
     heading: "Example pull request",
-    url: "https://github.com/octo-org/example/pull/456",
+    url: "https://github.com/octo-org/example/pull/456/?synthetic=1#discussion_rsynthetic",
     body: "Visible pull request body",
     comments: ["Review conversation comment"]
   }));

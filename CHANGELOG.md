@@ -15,6 +15,7 @@ All notable product changes will be recorded in this file.
   `textContent` fallback.
 - Added page title provenance to Markdown output.
 - Kept page titles inside a Markdown-inert untrusted-content fence.
+- Canonicalized supported source URLs without query parameters or fragments.
 - Added structural blockquote boundaries for untrusted body and comment
   previews.
 - Added regression checks for hidden content, Markdown structure, background

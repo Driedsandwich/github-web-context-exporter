@@ -52,6 +52,9 @@ export function extractVisiblePageMetadata() {
   const heading = normalizeText(document.querySelector("h1")?.innerText);
   const path = document.location.pathname;
   const pageKind = classifyPageKind(path);
+  const canonicalUrl = pageKind
+    ? `https://github.com${path.replace(/\/$/, "")}`
+    : "";
 
   let visibleContentPreview = "";
   let visibleContentStatus = "not_applicable";
@@ -108,7 +111,7 @@ export function extractVisiblePageMetadata() {
   return {
     title,
     heading,
-    url: document.location.href,
+    url: canonicalUrl,
     visibleContentPreview,
     visibleContentStatus,
     visibleComments,

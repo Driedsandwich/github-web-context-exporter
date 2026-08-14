@@ -23,7 +23,7 @@ Pull Request support is limited to the Conversation page.
 - repository owner and name
 - Issue or Pull Request number
 - page type
-- source URL
+- canonical source URL without query parameters or fragments
 - export timestamp
 - exporter name
 
