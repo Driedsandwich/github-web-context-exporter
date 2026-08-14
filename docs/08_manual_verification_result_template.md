@@ -45,7 +45,11 @@ Notes:
 - [ ] Type is `issue`.
 - [ ] Number is shown.
 - [ ] Page title is shown or clear fallback appears.
-- [ ] Source includes the current document title and page URL.
+- [ ] Source includes repository, number, type, canonical URL without query or
+  fragment data, export timestamp, exporter, and export mode.
+- [ ] Untrusted Page Title includes the current document title or explicit
+  fallback in a fenced code block whose delimiter is longer than any backtick
+  run in the title.
 - [ ] Body Preview appears or clear fallback appears.
 - [ ] Visible Comments Preview appears or clear fallback appears.
 - [ ] Body and comment snippets are enclosed in fenced code blocks nested in blockquotes as untrusted content.
@@ -66,7 +70,11 @@ Notes:
 - [ ] Type is `pull request`.
 - [ ] Number is shown.
 - [ ] Page title is shown or clear fallback appears.
-- [ ] Source includes the current document title and page URL.
+- [ ] Source includes repository, number, type, canonical URL without query or
+  fragment data, export timestamp, exporter, and export mode.
+- [ ] Untrusted Page Title includes the current document title or explicit
+  fallback in a fenced code block whose delimiter is longer than any backtick
+  run in the title.
 - [ ] Body Preview appears or clear fallback appears.
 - [ ] Visible Comments Preview appears or clear fallback appears.
 - [ ] Body and comment snippets are enclosed in fenced code blocks nested in blockquotes as untrusted content.

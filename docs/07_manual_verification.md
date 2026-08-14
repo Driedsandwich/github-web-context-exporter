@@ -48,9 +48,13 @@ If testing on private repository pages, do not paste, publish, screenshot, or sh
 4. Confirm the Markdown preview includes:
    - `GitHub Issue Context`
    - `Source`
-   - the current document title and page URL under `Source`
+   - repository, number, type, canonical URL without query or fragment data,
+     export timestamp, exporter, and export mode under `Source`
    - `Limitations`
    - `Review Before Sharing`
+   - `Untrusted Page Title`, with the current document title or explicit
+     fallback inside a fenced code block whose delimiter is longer than any
+     backtick run in the title
    - `Body Preview`
    - `Visible Comments Preview`
    - `Suggested Next Use`
@@ -76,9 +80,13 @@ If testing on private repository pages, do not paste, publish, screenshot, or sh
 4. Confirm the Markdown preview includes:
    - `GitHub Pull Request Context`
    - `Source`
-   - the current document title and page URL under `Source`
+   - repository, number, type, canonical URL without query or fragment data,
+     export timestamp, exporter, and export mode under `Source`
    - `Limitations`
    - `Review Before Sharing`
+   - `Untrusted Page Title`, with the current document title or explicit
+     fallback inside a fenced code block whose delimiter is longer than any
+     backtick run in the title
    - `Body Preview`
    - `Visible Comments Preview`
    - `Suggested Next Use`
@@ -120,7 +128,10 @@ Manual verification passes when:
 
 - supported Issue pages produce a Markdown preview
 - supported Pull Request conversation pages produce a Markdown preview
-- Source records the current document title and page URL
+- Source records repository, number, type, canonical URL, export timestamp,
+  exporter, and export mode
+- Untrusted Page Title records the current title or explicit fallback inside a
+  dynamically sized Markdown-inert fence
 - body and comment snippets remain inside fenced code blocks nested in blockquotes as untrusted content
 - hidden or collapsed DOM content is not promoted into body or comment previews
 - a visible comment is not promoted into a missing body preview
