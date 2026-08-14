@@ -28,6 +28,11 @@ The export is deliberately incomplete. Hidden, collapsed, paginated,
 dynamically unloaded, diff, checks, files-changed, and complete review-thread
 content may be omitted.
 
+Here, visible means CSS-rendered or potentially visible. The extractor excludes
+content hidden by `hidden` or `inert`, `display: none`, hidden or collapsed
+visibility, or zero opacity. It does not guarantee that extracted content is
+inside the viewport, unobscured, or currently on-screen.
+
 ## Install locally
 
 1. Clone or download this repository.
