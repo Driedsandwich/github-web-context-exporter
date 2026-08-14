@@ -50,6 +50,13 @@ files-changed content is outside the completeness claim.
 The extractor uses visible `innerText` for page-derived body and comment
 content. It does not fall back to hidden `textContent`.
 
+In this contract, visible means CSS-rendered or potentially visible. Elements
+hidden by `hidden` or `inert`, `display: none`, hidden or collapsed visibility,
+or zero opacity are excluded. The extractor does not claim that retained
+content is inside the viewport, unobscured, or currently on-screen. Viewport
+clipping, IntersectionObserver-based checks, and occlusion detection remain
+outside the runtime design.
+
 ## Rendering principle
 
 Page-derived content is rendered through `textContent` or form-control
