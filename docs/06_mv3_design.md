@@ -27,9 +27,11 @@ The extension has no service worker or content-script registration.
 6. The popup validates the injection result and fails closed if extraction did
    not execute successfully.
 7. The formatter creates a visible-page-only Markdown preview.
-   Page-derived body and comment previews remain inside blockquotes marked as
-   untrusted content, with dynamically sized fenced code blocks preventing
-   downstream Markdown renderers from activating page-supplied syntax.
+   The page title remains in a separate `Untrusted Page Title` section inside
+   a dynamically sized fenced code block. Page-derived body and comment
+   previews remain inside blockquotes marked as untrusted content, with the
+   same dynamic-fence rule preventing downstream Markdown renderers from
+   activating page-supplied syntax.
 8. The user can copy or locally save the Markdown.
 
 ## Supported URL patterns
@@ -57,9 +59,12 @@ Page-derived content is rendered through `textContent` or form-control
 
 The output includes:
 
-- Source
+- Source, containing repository, number, type, canonical URL, export timestamp,
+  exporter, and export mode
 - Limitations
 - Review Before Sharing
+- Untrusted Page Title, containing the current title or explicit fallback in a
+  dynamically sized Markdown-inert fence
 - Body Preview
 - Visible Comments Preview
 - Suggested Next Use
