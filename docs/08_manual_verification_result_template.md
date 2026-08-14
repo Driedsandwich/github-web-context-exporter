@@ -48,7 +48,7 @@ Notes:
 - [ ] Source includes the current document title and page URL.
 - [ ] Body Preview appears or clear fallback appears.
 - [ ] Visible Comments Preview appears or clear fallback appears.
-- [ ] Body and comment snippets are blockquoted as untrusted content.
+- [ ] Body and comment snippets are enclosed in fenced code blocks nested in blockquotes as untrusted content.
 - [ ] Hidden or collapsed content is not included.
 - [ ] A visible comment is not mislabeled as a missing body.
 - [ ] Markdown preview includes limitation language.
@@ -69,7 +69,7 @@ Notes:
 - [ ] Source includes the current document title and page URL.
 - [ ] Body Preview appears or clear fallback appears.
 - [ ] Visible Comments Preview appears or clear fallback appears.
-- [ ] Body and comment snippets are blockquoted as untrusted content.
+- [ ] Body and comment snippets are enclosed in fenced code blocks nested in blockquotes as untrusted content.
 - [ ] Hidden or collapsed content is not included.
 - [ ] A visible comment is not mislabeled as a missing body.
 - [ ] Markdown preview does not claim Files changed, diffs, checks, or complete review threads.

@@ -29,12 +29,7 @@ function fencedUntrustedText(value) {
 }
 
 function quoteUntrustedText(value) {
-  const text = cleanText(value);
-  if (!text) {
-    return "> Unavailable";
-  }
-
-  return text
+  return fencedUntrustedText(value)
     .split(/\r?\n/)
     .map((line) => `> ${line}`)
     .join("\n");

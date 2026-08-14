@@ -54,7 +54,7 @@ If testing on private repository pages, do not paste, publish, screenshot, or sh
    - `Body Preview`
    - `Visible Comments Preview`
    - `Suggested Next Use`
-5. Confirm body and comment snippets are blockquoted as untrusted page content.
+5. Confirm body and comment snippets are blockquoted as untrusted page content and enclosed in fenced code blocks.
 6. Click `Copy Markdown`.
 7. Confirm the button immediately changes to `Copied!`.
 8. Confirm the button returns to `Copy Markdown` after about 1.5 seconds.
@@ -82,7 +82,7 @@ If testing on private repository pages, do not paste, publish, screenshot, or sh
    - `Body Preview`
    - `Visible Comments Preview`
    - `Suggested Next Use`
-5. Confirm body and comment snippets are blockquoted as untrusted page content.
+5. Confirm body and comment snippets are blockquoted as untrusted page content and enclosed in fenced code blocks.
 6. Confirm the preview does not claim to include Files changed, diffs, checks, hidden or collapsed content, or complete review threads.
 7. Confirm Copy and Download behave the same as on Issue pages.
 
@@ -121,7 +121,7 @@ Manual verification passes when:
 - supported Issue pages produce a Markdown preview
 - supported Pull Request conversation pages produce a Markdown preview
 - Source records the current document title and page URL
-- body and comment snippets remain inside blockquotes as untrusted content
+- body and comment snippets remain inside fenced code blocks nested in blockquotes as untrusted content
 - hidden or collapsed DOM content is not promoted into body or comment previews
 - a visible comment is not promoted into a missing body preview
 - unsupported pages fail safely
