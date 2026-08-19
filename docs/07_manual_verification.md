@@ -1,6 +1,6 @@
 # Manual Verification Guide
 
-Last updated: 2026-07-30
+Last updated: 2026-08-14
 
 This guide verifies the current local extension behavior. It is not a release or store-publishing checklist.
 
